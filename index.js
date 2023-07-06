@@ -24,7 +24,7 @@ const startTodoListService = (todoListServicePort) => {
                            SUCCESSFUL_APPLICATION_SET_UP.concat(todoListServicePort)));
 }
 
-startTodoListService(3000);
+startTodoListService(process.env.SERVER_PORT);
 
 
 
