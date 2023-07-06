@@ -15,15 +15,15 @@ import {
 
 /**
  * Build application entry point.
- * @param {Number} todoListServicePort Application entry point port.
+ * @param {Number} allDoneServicePort Application entry point port.
  */
 
-const startTodoListService = (todoListServicePort) => {
+const startAllDoneService = (allDoneServicePort) => {
 
     try {        
         // Validate as valid port the entry point parameter.
         Joi.assert(
-            todoListServicePort,
+            allDoneServicePort,
             Joi // for chaining
                 .number()
                 .port()
@@ -31,11 +31,11 @@ const startTodoListService = (todoListServicePort) => {
         );
         // The server is stored in case of further use cases.
         const server = app // for chaining.
-                           .listen(todoListServicePort)
+                           .listen(allDoneServicePort)
                            // Listen to net.Server events, reference to net module in NodeJS documentation.
                            .on('listening', () => winstonLogger.info(                               
                                  // Application setting message. 
-                                 SUCCESSFUL_APPLICATION_SET_UP.concat(todoListServicePort)
+                                 SUCCESSFUL_APPLICATION_SET_UP.concat(allDoneServicePort)
                                )
                             )
                             .on('error', (err) => winstonLogger.error(err));        
@@ -44,7 +44,7 @@ const startTodoListService = (todoListServicePort) => {
     }
 }
 
-startTodoListService(process.env.SERVER_PORT);
+startAllDoneService(process.env.SERVER_PORT);
 
 
 
