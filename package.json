@@ -5,7 +5,7 @@
   "type": "module",
   "main": "index.js",
   "scripts": {
-    "dev": "cross-env NODE_ENV=development node -r dotenv/config index.js"
+    "dev": "cross-env NODE_ENV=development WINSTON_LOG_LEVEL=verbose node -r dotenv/config index.js"
   },
   "keywords": [],
   "author": "",

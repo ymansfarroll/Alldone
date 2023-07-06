@@ -6,6 +6,7 @@
  */
 
 import app from './lib/app.js';
+import winstonLogger from './lib/loggers/winston.loggers.js';
 
 import { SUCCESSFUL_APPLICATION_SET_UP } from './lib/helpers/constants.js';
 
@@ -19,7 +20,7 @@ const startTodoListService = (todoListServicePort) => {
     const server = app // for chaining.
                        .listen(todoListServicePort)
                        // Listen to net.Server events, reference to net module in NodeJS documentation.
-                       .on('listening', () => console.log(
+                       .on('listening', () => winstonLogger.info(
                            // Application setting message. 
                            SUCCESSFUL_APPLICATION_SET_UP.concat(todoListServicePort)));
 }
