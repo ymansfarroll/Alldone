@@ -16,11 +16,9 @@ import {
     INTERNAL_ERROR,
     JOI_PORT_VALIDATION_ERROR,
     FAILED_APPLICATION_SET_UP,
-    SUCCESSFUL_APPLICATION_SET_UP } from './lib/helpers/constants.js';
-
-import { 
     FAILED_DATABASE_CONNECTION,
-    DATABASE_CONNECTION_FINISHED } from './lib/database/helpers/constants.js';
+    DATABASE_CONNECTION_FINISHED,
+    SUCCESSFUL_APPLICATION_SET_UP } from './lib/helpers/constants.js';
     
 /**
  * Build application entry point.
