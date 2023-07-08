@@ -5,6 +5,8 @@
  * @private
  */
 
+import './lib/signals/app.signals.js'; // import for side-effects.
+
 import Joi from 'joi';
 import app from './lib/app.js';
 import mongoose from 'mongoose';
