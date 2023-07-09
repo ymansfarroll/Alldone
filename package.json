@@ -6,7 +6,7 @@
   "main": "index.js",
   "scripts": {
     "dev": "cross-env NODE_ENV=development WINSTON_LOG_LEVEL=verbose node -r dotenv/config index.js",
-    "test": "cross-env NODE_ENV=test WINSTON_LOG_LEVEL=verbose mocha -r dotenv/config -r test/hooks/hooks.js --timeout 5000",
+    "test": "cross-env NODE_ENV=test mocha -r dotenv/config -r test/hooks/hooks.js --timeout 5000",
     "prod": "pm2 start index.js"
   },
   "keywords": [],

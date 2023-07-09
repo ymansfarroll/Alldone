@@ -18,12 +18,12 @@ import winstonLogger from '../../lib/loggers/winston.loggers.js';
 export const mochaHooks = () => {
     return {
         async beforeAll () {
-            // winstonLogger.silent = true; // Turn off the loggers.
+            winstonLogger.silent = true; // Turn off the loggers.
             // Initial database connection. 
             await mongoose.connect( databaseConfiguration.dbURI ); // Neither user nor password is required in test environment.           
         },
         async afterAll () {
-            // winstonLogger.silent = false; // Turn on the loggers.
+            winstonLogger.silent = false; // Turn on the loggers.
             // Drop the database after finishing all the tests. 
             await mongoose.connection.db.dropDatabase();
             // Ensure to close the connection through setting [force] parameter to [true].
