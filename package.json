@@ -6,6 +6,7 @@
   "main": "index.js",
   "scripts": {
     "dev": "cross-env NODE_ENV=development WINSTON_LOG_LEVEL=verbose node -r dotenv/config index.js",
+    "test": "cross-env NODE_ENV=test WINSTON_LOG_LEVEL=verbose mocha -r dotenv/config -r test/hooks/hooks.js --timeout 5000",
     "prod": "pm2 start index.js"
   },
   "keywords": [],
@@ -30,6 +31,12 @@
     "winston": "^3.9.0"
   },
   "devDependencies": {
-    "dotenv": "^16.3.1"
+    "chai": "^4.3.7",
+    "dotenv": "^16.3.1",
+    "mocha": "^10.2.0",
+    "moment": "^2.29.4",
+    "nodemon": "^3.0.1",
+    "nyc": "^15.1.0",
+    "supertest": "^6.3.3"
   }
 }
