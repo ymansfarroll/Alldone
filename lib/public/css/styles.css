@@ -1,7 +1,20 @@
 
+:root {
+    /* Define your variables here */ 
+}
+
 html, body {
     height: 100%;
     width: 100%;
+}
+
+@font-face {
+    font-family: 'Oswald-Light';
+    src: url('/fonts/static/Roboto-Light.ttf');
+}
+
+.form-label, input {
+    font-family: 'Oswald-Light';
 }
 
 a {
