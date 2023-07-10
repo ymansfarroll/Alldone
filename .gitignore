@@ -5,3 +5,9 @@ package-lock.json
 
 # env
 .env
+
+# bootstrap offline files, a CDN will be used in production instead.
+
+lib/public/bootstrap
+
+
